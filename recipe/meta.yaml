@@ -1,5 +1,5 @@
 {% set name = "fhlmi" %}
-{% set version = "0.39.0" %}
+{% set version = "0.40.0" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fhlmi-{{ version }}.tar.gz
-  sha256: 0e74b9d84360015773c03c10c2d34f0564130b7234a19e703e9e3b59d3bf5675
+  sha256: 432dfdc76023c6f5b9ec6986d1d6ec5db8a43e408db6d3e87da1874406ac9a8c
 
 build:
   noarch: python
@@ -27,7 +27,7 @@ requirements:
     - coredis
     - fhaviary >=0.14.0
     - limits >=4.8
-    - litellm >=1.63.5,<1.75
+    - litellm >=1.75.6
     - pydantic >=2.0,<3.dev0,>=2.10.1
     - tiktoken >=0.4.0
 
