@@ -1,5 +1,5 @@
 {% set name = "fhlmi" %}
-{% set version = "0.42.0" %}
+{% set version = "0.42.1" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fhlmi-{{ version }}.tar.gz
-  sha256: c68e3c0028b92a6c9c6a32cd0b9667f3129b3fa5774faab7d87cc02f97f2b5f3
+  sha256: d192a026e49ab28b95947a04ee0b1199a4f97da76aea29bfec4ac5e6d4683384
 
 build:
   noarch: python
