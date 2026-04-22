@@ -1,5 +1,5 @@
 {% set name = "fhlmi" %}
-{% set version = "0.45.1" %}
+{% set version = "0.45.3" %}
 {% set python_min = "3.11" %}
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/fhlmi-{{ version }}.tar.gz
-  sha256: 793fae4776fbed3aea8ad26f33b8ff37399fdddf64151976c01f3749553898a9
+  sha256: c81bda4b30d1b6cb874099f000fe5d930c2b40e07d6990fb02a5b8b16140a306
 
 build:
   noarch: python
@@ -22,12 +22,15 @@ requirements:
     - setuptools-scm >=8
     - pip
   run:
+    - aiohttp
+    - openai >=2
+    - orjson
     - typing_extensions
     - python >={{ python_min }}
     - coredis >=3.0.1
     - fhaviary >=0.14.0
     - limits >=4.8
-    - litellm >=1.81.10
+    - litellm >=1.83.7,<=1.83.10
     - pydantic >=2.0,<3.dev0,>=2.10.1
     - tiktoken >=0.4.0
 
