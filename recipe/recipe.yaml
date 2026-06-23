@@ -2,8 +2,8 @@ schema_version: 1
 
 context:
   name: fhlmi
-  version: "0.46.0"
-  python_min: "3.11"
+  version: 0.46.1
+  python_min: '3.11'
 
 package:
   name: ${{ name|lower }}
@@ -11,10 +11,10 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fhlmi-${{ version }}.tar.gz
-  sha256: 56ab14d230bc0b4a48eb880d91f9aad3558d50b4bacb99cc6a52d9e1e6179320
+  sha256: e40da045776018a567cd138d42321814568a3f19fea0535c35f6b8480ed0ca18
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation
 
@@ -28,15 +28,13 @@ requirements:
     - aiohttp
     - openai >=2
     - orjson
-    - typing_extensions
     - python >=${{ python_min }}
     - coredis >=3.0.1
     - fhaviary >=0.14.0
     - limits >=4.8
-    - litellm >=1.83.9,<=1.83.10
+    - litellm >=1.83.9,<=1.84.1
     - pydantic >=2.0,<3.dev0,>=2.10.1
     - tiktoken >=0.4.0
-
 tests:
   - python:
       imports:
