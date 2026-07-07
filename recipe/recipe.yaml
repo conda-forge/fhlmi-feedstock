@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fhlmi
-  version: "0.46.2"
+  version: 0.47.0
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fhlmi-${{ version }}.tar.gz
-  sha256: 63f029563e2c102548d8f573fd54408cb1c4575b3e4a6a6f89fe2e391bf05cce
+  sha256: 90e3d08e52d55daaf6e1537211da7436a22d956ae883c0277a82514bd445f7e2
 
 build:
   number: 0
@@ -35,6 +35,7 @@ requirements:
     - litellm >=1.83.9,<=1.84.1
     - pydantic >=2.0,<3.dev0,>=2.10.1
     - tiktoken >=0.4.0
+    - tenacity
 tests:
   - python:
       imports:
