@@ -2,7 +2,7 @@ schema_version: 1
 
 context:
   name: fhlmi
-  version: 0.47.0
+  version: "0.48.0"
   python_min: '3.11'
 
 package:
@@ -11,7 +11,7 @@ package:
 
 source:
   url: https://pypi.org/packages/source/${{ name[0] }}/${{ name }}/fhlmi-${{ version }}.tar.gz
-  sha256: 90e3d08e52d55daaf6e1537211da7436a22d956ae883c0277a82514bd445f7e2
+  sha256: 09b84cf19a2f7708b9aa273c5dbaea8c61ae9421ee5674ff42d377078d5f6a1b
 
 build:
   number: 0
